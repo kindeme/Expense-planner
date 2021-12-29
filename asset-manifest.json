@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Expense-planner/static/css/main.fff64baf.css",
+    "main.js": "/Expense-planner/static/js/main.672f9f62.js",
+    "index.html": "/Expense-planner/index.html",
+    "main.fff64baf.css.map": "/Expense-planner/static/css/main.fff64baf.css.map",
+    "main.672f9f62.js.map": "/Expense-planner/static/js/main.672f9f62.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fff64baf.css",
+    "static/js/main.672f9f62.js"
+  ]
+}
