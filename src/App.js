@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import ListExpense from "./components/ListExpense";
+import data from "./data";
+import Search from "./components/Search";
+import Header from "./components/Header";
+import ExpenseForm from "./components/ExpenseForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [expenses, setExpenses] = useState(data);
+
+	const handleRemove = (id) => {
+		let newExpenses = expenses.filter((expense) => expense.id !== id);
+		setExpenses(newExpenses);
+	};
+
+	const handleAdd = (expense) => {
+		setExpenses((prevExpenses) => {
+			return [...prevExpenses, expense];
+		});
+	};
+	return (
+		<div className="App">
+			<h1> Budget Planner</h1>
+			<Header expenses={expenses} />
+			<Search />
+			<ListExpense expenses={expenses} handleRemove={handleRemove} />
+			<ExpenseForm handleAdd={handleAdd} />
+		</div>
+	);
 }
 
 export default App;

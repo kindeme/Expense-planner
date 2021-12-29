@@ -1,0 +1,50 @@
+.header {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 2em;
+	margin-top: 2em;
+}
+.header article {
+	max-width: 30rem;
+	padding: 0.7em 0.7em;
+	border-radius: 5px;
+}
+.header article span {
+	display: inline-block;
+	margin-left: 0.3em;
+}
+.header .budget {
+	display: flex;
+	background: rgb(209, 205, 205);
+	justify-content: space-between;
+}
+.header .budget button {
+	padding: 0.4em 0.6em;
+	color: white;
+	background: rgb(30, 30, 226);
+	border: none;
+	border-radius: 5px;
+	margin-left: 2em;
+}
+.header .budgetInput {
+	border: none;
+	box-shadow: 0px 0px 2px black;
+	padding: 0.3em;
+}
+.header .remain {
+	background: rgb(175, 214, 135);
+}
+.header .spent-amount {
+	background: rgb(104, 178, 228);
+}
+
+@media screen and (max-width: 800px) {
+	.header {
+		flex-direction: column;
+	}
+	.header article {
+		margin-bottom: 0.5em;
+	}
+}

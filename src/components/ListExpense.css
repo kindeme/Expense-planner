@@ -1,0 +1,28 @@
+.expense-list .expense {
+	margin-bottom: 1em;
+	display: flex;
+	justify-content: space-between;
+	color: black;
+	border: 1px solid grey;
+	box-shadow: 0px 0px 2px rgb(48, 44, 44);
+	padding: 0.5em 0.5em;
+	border-radius: 5px;
+}
+.expense div {
+	display: flex;
+	justify-content: space-around;
+}
+.expense div p {
+	margin-right: 1em;
+	padding: 0.2em 0.4em;
+	border-radius: 40%;
+	background-color: rgb(30, 30, 226);
+	color: white;
+	font-size: 0.8em;
+	align-self: center;
+}
+
+.expense div .icon {
+	font-size: 1.3rem;
+	align-self: center;
+}

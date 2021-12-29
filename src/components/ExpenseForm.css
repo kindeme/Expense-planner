@@ -1,0 +1,31 @@
+.expenseForm {
+	margin-top: 2em;
+}
+.expenseForm form {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 1em;
+	justify-content: space-between;
+}
+.expenseForm form label span {
+	display: block;
+}
+.expenseForm form label input {
+	padding: 0.3em 0.5em;
+	margin-top: 0.7em;
+	margin-bottom: 0.7em;
+	border: none;
+	width: 20em;
+	box-shadow: 0px 0px 2px black;
+	font-size: 1em;
+}
+
+.expenseForm button {
+	align-self: flex-end;
+	background: rgb(30, 30, 226);
+	padding: 0.5em 0.7em;
+	color: white;
+	border-radius: 5px;
+	border: none;
+	margin-bottom: 0.7em;
+}

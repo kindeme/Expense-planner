@@ -1,0 +1,22 @@
+.search {
+	margin-bottom: 1.2em;
+}
+.search input {
+	border: none;
+}
+.search div {
+	margin-top: 1em;
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid black;
+	width: 100%;
+	padding: 0.6em 0.3em;
+	border-radius: 5px;
+}
+.search input::placeholder {
+	font-size: 1.1em;
+	color: rgb(29, 27, 27);
+}
+.search-btn {
+	font-size: 1.5em;
+}
