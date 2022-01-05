@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./Header.css";
 
 const Header = ({ expenses }) => {
-	const [budget, setBudget] = useState(2000);
+	const [budget, setBudget] = useState(0);
 	const [newBudget, setNewBudget] = useState("");
 	const [isEditing, setIsEditing] = useState(true);
-	const [remain, setRemain] = useState(1350);
-	const [spend, setSpend] = useState(650);
+	const [remain, setRemain] = useState(0);
+	const [spend, setSpend] = useState(0);
 
 	// reduced method on an object of array from  this tutorial if you want result array or number "https://www.youtube.com/watch?v=6rNIY7W8IZM" or object result "https://www.youtube.com/watch?v=5BFkp8JjLEY"
 	useEffect(() => {
@@ -32,17 +32,14 @@ const Header = ({ expenses }) => {
 	return (
 		<section className="header">
 			<article className="budget">
-				{isEditing && (
-					<>
-						<p>
-							Budget : <span>${budget}</span>
-						</p>
-						<button onClick={() => setIsEditing(false)}>
+				{isEditing ? (
+					<p>
+						Budget : <span>${budget}</span>
+						<button onClick={() => setIsEditing(!isEditing)}>
 							Edit
 						</button>
-					</>
-				)}
-				{!isEditing && (
+					</p>
+				) : (
 					<form onSubmit={handleBudget}>
 						<input
 							className="budgetInput"
@@ -50,7 +47,7 @@ const Header = ({ expenses }) => {
 							value={newBudget}
 							onChange={(e) => setNewBudget(e.target.value)}
 						/>
-						<button> Save</button>
+						<button type="submit">Save</button>
 					</form>
 				)}
 			</article>
